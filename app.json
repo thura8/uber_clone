@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "TR_Ryde",
+    "name": "Uber",
     "slug": "TR_Ryde",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,6 +8,11 @@
     "scheme": "trryde",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
       "supportsTablet": true
     },
@@ -16,7 +21,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.anonymous.TR_Ryde"
     },
     "web": {
       "bundler": "metro",
@@ -29,7 +35,6 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
