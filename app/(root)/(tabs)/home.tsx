@@ -131,8 +131,8 @@ export default function Page() {
       <FlatList
         data={recentRides?.slice(0, 5)}
         renderItem={({ item }) => <RideCard ride={item} />}
-        className="px-5 "
-        keyboardShouldPersistTaps={"handled"}
+        className="px-5"
+        keyboardShouldPersistTaps="handled"
         contentContainerStyle={{ paddingBottom: 100 }}
         ListEmptyComponent={() => (
           <View className="flex flex-col items-center justify-center">
@@ -147,7 +147,7 @@ export default function Page() {
                 <Text className="text-sm">No recent rides found</Text>
               </>
             ) : (
-              <ActivityIndicator size={"small"} color={"#000"} />
+              <ActivityIndicator size="small" color="#000" />
             )}
           </View>
         )}
@@ -155,10 +155,10 @@ export default function Page() {
           <>
             <View className="flex flex-row items-center justify-between my-5">
               <Text className="text-2xl font-JakartaExtraBold capitalize">
-                Welcome{", "}
+                Welcome,&nbsp;
                 {user?.firstName ||
-                  user?.emailAddresses[0].emailAddress.split("@")[0]}{" "}
-                👋
+                  user?.emailAddresses[0].emailAddress.split("@")[0]}
+                &nbsp; 👋
               </Text>
               <TouchableOpacity
                 onPress={handleSignOut}
@@ -173,12 +173,17 @@ export default function Page() {
               containerStyle="bg-white shadow-md shadow-neutral-300"
               handlePress={handleDestinationPress}
             />
-            <>
-              <Text className="text-xl font-JakartaBold mt-5 mb-3">
-                Your Current Location
-              </Text>
-              <View className="flex flex-row items-center bg-transparent h-[300px]"></View>
-            </>
+
+            {/* <Text className="text-xl font-JakartaBold mt-5 mb-3">
+              Your current location
+            </Text>
+            <View className="flex flex-row items-center bg-transparent h-[300px]">
+              <Map />
+            </View> */}
+
+            <Text className="text-xl font-JakartaBold mt-5 mb-3">
+              Recent Rides
+            </Text>
           </>
         )}
       />
